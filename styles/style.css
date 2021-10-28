@@ -160,6 +160,7 @@ nav {
     background:url(../img/course-card.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
     width: 300px;
     height: inherit;
     margin-left: 20px;
@@ -331,21 +332,6 @@ nav {
 footer {
     margin-top: -10px;
 }
-::-webkit-scrollbar-thumb {
-    background: transparent; 
-    border-radius: 10px;
-  }
-::-webkit-scrollbar-thumb:hover {
-    background: transparent; 
-  }
-::-webkit-scrollbar {
-    width: 8px;
-  }
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 2px transparent; 
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0);
-  }
 .course-info-footer,
 footer {
     align-items: center;
@@ -430,6 +416,9 @@ iframe {
     }
     *{
         overflow-x: hidden;
+    }
+    .about,.mentors,.course-system,.course-list-content {
+        margin-top: -7px;
     }
     .nav-options {
         position: absolute;

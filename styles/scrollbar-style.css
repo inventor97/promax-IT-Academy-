@@ -1,4 +1,4 @@
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     width: 8px;
   }
 body::-webkit-scrollbar-track {
@@ -12,4 +12,4 @@ body::-webkit-scrollbar-thumb {
   }
 body::-webkit-scrollbar-thumb:hover {
     background: var(--britness-primary); 
-  }
+  } */
