@@ -60,7 +60,7 @@ html {
 }
 .right-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-right: 35px;
     align-items: center;
 }
@@ -79,8 +79,6 @@ nav {
     color: #e5e5e5;
     width: 100%;
     background-color: transparent;
-    justify-content: space-between;
-    display: flex;
     align-items: center;
     text-align: center;
     width: 100% auto;
@@ -94,6 +92,9 @@ nav {
 .logo h3 {
     font-size: var(--title);
 
+}
+.address-on-menu {
+    display: none;
 }
 .nav-options li a {
     color: var(--secodary-color);
@@ -266,17 +267,18 @@ nav {
     border-radius: 13px;
     margin: 3px;
 }
-.circle-slider-pos.pos {
+.circle-slider-pos.posit {
     background-color: var(--britness-primary);
 }
 .mentor-slider.pos {
     display: flex;
-    transform: translateX(0);
+    transition: all .5s;
 }
 .mentor-slider{
     position: absolute;
     display: none;
-    transform: translateX(-100%);
+    transform: translateX(100%);
+    transition: all .5s;
 }
 
 .slider-pos {
@@ -301,6 +303,7 @@ nav {
 }
 .mentor-card {
     padding: 15px;
+    transition: all .5s;
 }
 .course-system {
     color: var(--bkg-color);
@@ -430,14 +433,24 @@ iframe {
     .nav-options {
         position: absolute;
         right: 0px;
-        height: 92vh;
+        height: 87vh;
         background-color: var(--primary-color);
-        width: 50%;
-        top: 8vh;
+        width: 100%;
+        top: 13vh;
         flex-direction: column;
         align-items: center;
         transform: translateX(100%);
         transition: 0.5s ease-in;
+        z-index: 999;
+    }
+    
+    .address-on-menu {
+        margin-top: 200px;
+        display: block;
+    }
+    .nav-options li {
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
     .content-card-view {
         width: 250px;
@@ -503,9 +516,13 @@ iframe {
     .content-card-view {
         width: 230px;
     }
+    footer {
+        background-position: top;
+    }
 }
 @media (max-width:512px) {
     .header-content {
+        margin-top: 25px;
         flex-direction: column;
     }
     .content-card-view {
@@ -517,4 +534,84 @@ iframe {
     iframe {
         width: 80%;
     }
+    .course-ads-content {
+        width: 98%;
+        padding: 0;
+        margin: 0;
+        margin-left: 1vw;
+    }
+    .mentor-list {
+        padding: 0;
+        margin: 0;
+        height: 600px;
+        width: 38%;
+        margin: 0 auto;
+    }
+    .mentor-slider {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 425px) {
+    :root {
+        --main-title: 28px;
+        --title: 18px;
+        --title-bigger: 20px;
+        --title-smaller:16px;
+        --sub-title: 14px;
+        --sub-title-smaller: 12px;
+    }
+    .header-content {
+        margin-top: 25px;
+        flex-direction: column;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .mentor-list {
+        width: 95%;
+    }
+    iframe {
+        width: 90%;
+    }
+    .mentor-list {
+        width: 50%;
+    }
+    
+}
+
+.nav-is-pressed {
+    transform: translate(0%);
+    z-index: 999;
+}
+
+@keyframes animateLinkItems {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes animateMentors {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg)translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+
 }
