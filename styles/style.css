@@ -160,7 +160,7 @@ nav {
     background:url(../img/course-card.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right;
+    background-position: bottom;
     width: 300px;
     height: inherit;
     margin-left: 20px;
@@ -281,6 +281,12 @@ nav {
     display: none;
     transform: translateX(100%);
     transition: all .5s;
+}
+.mentor-name {
+    font-size: var(--sub-title);
+}
+.mentor-description {
+    font-size: var(--sub-title-smaller);
 }
 
 .slider-pos {
@@ -417,9 +423,13 @@ iframe {
     *{
         overflow-x: hidden;
     }
-    .about,.mentors,.course-system,.course-list-content {
+    .about,.mentors,.course-list-content, footer  {
         margin-top: -7px;
     }
+    .course-system{
+        margin-top: -8px;
+    }
+
     .nav-options {
         position: absolute;
         right: 0px;
@@ -435,12 +445,12 @@ iframe {
     }
     
     .address-on-menu {
-        margin-top: 200px;
+        position: relative;
         display: block;
     }
     .nav-options li {
-        padding-top: 25px;
-        padding-bottom: 25px;
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
     .content-card-view {
         width: 250px;
@@ -533,7 +543,7 @@ iframe {
     .mentor-list {
         padding: 0;
         margin: 0;
-        height: 600px;
+        height: 630px;
         width: 38%;
         margin: 0 auto;
     }
