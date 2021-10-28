@@ -182,6 +182,7 @@ nav {
     font-size: var(--title-smaller);
     padding-left: 15px;
     padding-top: 15px;
+    color: var(--primary-color);
 }
 .card-content span,
 .card-content a {
