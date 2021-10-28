@@ -88,6 +88,7 @@ nav {
     padding: 10px;
 }
 .nav-options li {
+    position: relative;
 }
 .logo h3 {
     font-size: var(--title);
@@ -102,7 +103,29 @@ nav {
     margin-left: 25px;
     margin-right: 25px;
     font-weight: bold;
-    transition: all 1s
+    transition: all .5s;
+    display: block;
+    position: relative;
+}
+.navi-menu-option::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: var(--secodary-color);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+.navi-menu-option::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;  
+}  
+.navi-menu-option:hover::after,
+.navi-menu-option:focus::after{
+    transform: scale(1);  
 }
 
 .header-content {
