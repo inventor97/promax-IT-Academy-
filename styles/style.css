@@ -462,6 +462,10 @@ iframe {
     .nav-options li {
         opacity: 0;
     }
+    .course-title div a ion-icon, 
+    .course-title div a i {
+        font-size: 36px;
+    }
     .footer-content {
         flex-direction: column;
     }

@@ -75,6 +75,9 @@ nav {
     width: 90%;
     height: 60;
 }
+.choice-box-period {
+    border: 1px solid #fff;
+}
 .course-info-content {
     background-color: rgba(229, 229, 229, 0.9);
     width: 50%;
@@ -252,5 +255,18 @@ nav {
     }
     .footer-content {
         flex-direction: column;
+    }
+    .contact {
+        margin-top: 25px;
+    }
+    .course-title div a ion-icon, 
+    .course-title div a i {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 425px) {
+    .center {
+        width: 95%;
     }
 }
