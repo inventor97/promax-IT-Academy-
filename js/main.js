@@ -1,19 +1,26 @@
 const slide =() => {
     const ham = document.querySelector('.hamb-right');
+    const navParent = document.querySelector('.header-nav');
     const nav = document.querySelector('.nav-options');
     const navBar = document.querySelector('.right-content');
     const links = document.querySelectorAll('.nav-options li');
 
     ham.addEventListener('click', () => {
         nav.classList.toggle('nav-is-pressed');
+        
         links.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = ``;
             } else {
                 link.style.animation = `animateLinkItems 0.5s ease forwards ${index/7 + 0.8}s`;
             }
-        });;
-        document.body.classList.toggle('disable-scroll')
+        });
+        navParent.classList.toggle('nav-is-pressed-bkg');
+        if(navParent.classList.contains('header-nav')) {
+            navParent.classList.remove('header-nav');
+        } else {
+            navParent.classList.add('header-nav');
+        }
         ham.classList.toggle('toggle');
     })
 }
@@ -23,6 +30,8 @@ const options = document.querySelectorAll('.nav-options li');
 const links = document.querySelectorAll('.nav-options li a');
 const nav = document.querySelector('.nav-options');
 const ham = document.querySelector('.hamb-right');
+const navParent = document.querySelector('.header-nav');
+
 
 links.forEach((elm) => {
     elm.addEventListener('click', () => {
@@ -31,6 +40,8 @@ links.forEach((elm) => {
         options.forEach((link, index) => {
             link.style.animation = ``;
         });
+        navParent.classList.add('header-nav');
+        navParent.classList.remove('nav-is-pressed-bkg');
     })
 })
 const mentorList = document.querySelectorAll('.mentor-slider');

@@ -110,6 +110,7 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: left;
+    transition: all .6s;
 }
 .header-content h1 {
     color: #e5e5e5;
@@ -136,7 +137,7 @@ nav {
 }
 .course-list-content {
     margin-top: -10px;
-    background: url(../img/coursee-list-bkg.png);
+    background: url(../img/about.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -201,7 +202,7 @@ nav {
 }
 .about {
     margin-top: -10px;
-    background: url(../img/about.png);
+    background: url(../img/coursee-list-bkg.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -433,13 +434,13 @@ iframe {
     .nav-options {
         position: absolute;
         right: 0px;
-        height: 87vh;
+        height: 86vh;
         background-color: var(--primary-color);
         width: 100%;
-        top: 13vh;
+        top: 14vh;
         flex-direction: column;
         align-items: center;
-        transform: translateX(100%);
+        transform: translateX(-100%);
         transition: 0.5s ease-in;
         z-index: 999;
     }
@@ -580,6 +581,10 @@ iframe {
     
 }
 
+.nav-is-pressed-bkg {
+    background-color: var(--primary-color);
+    transition: all .6s;
+}
 .nav-is-pressed {
     transform: translate(0%);
     z-index: 999;
