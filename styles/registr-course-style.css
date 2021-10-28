@@ -248,6 +248,7 @@ nav {
         display: none;
     }
     .course-info-content {
+        margin: 5px auto;
         width: 90%;
     }
     .course-info-footer {
@@ -265,8 +266,14 @@ nav {
     }
 }
 
+
+
 @media (max-width: 425px) {
     .center {
         width: 95%;
+    }
+    .course-info-content {
+        margin: 5px auto;
+        width: 90%;
     }
 }
