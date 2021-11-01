@@ -26,6 +26,22 @@ html {
     box-sizing: border-box;
     overflow: overlay;
 }
+.preloader{
+    background: var(--bkg-color) url(../img/logo-fill.png) no-repeat center center ;
+    background-size: 4%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+.preloader-page{
+    background: transparent url(../img/qwe.gif) no-repeat center center;
+    background-size: 45%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
 .header-nav {
     background:url(../img/header-bkg.png);
     background-repeat: no-repeat;
@@ -73,7 +89,6 @@ html {
     background-color: var(--secodary-color);
     padding: 10px;
     border-radius: 10px;
-
 }
 nav {
     color: #e5e5e5;
@@ -230,23 +245,16 @@ nav {
     background: url(../img/coursee-list-bkg.png);
     background-repeat: no-repeat;
     background-size: cover;
-}
-.course-ads-content {
-    padding: 60px;
+    background-position: left;
+    align-items: center;
     text-align: center;
+    -webkit-perspective: 1000;
+	perspective: 1000;
 }
-.course-ads-content h2 {
+
+.about h2 {
+    margin-top: 35px;
     font-size: var(--title-bigger);
-    padding-top: 25px;
-}
-.adventage-content {
-    margin-top: 30px;
-    background-color: rgba(229,229,229,0.7);
-    border-radius: 10px;
-    padding: 40px;
-    box-shadow: 0px 0px 5px var(--britness-primary);
-}
-.adventage-list {
 }
 .course-period-info img {
     width: 90%;
@@ -260,9 +268,27 @@ nav {
 }
 .adventage {
     display: flex;
-    padding-bottom: 25px;
+    margin: 25px;
     align-items: center;
 }
+.adventage-list {
+    margin: 50px;
+    background-color: rgba(229,229,229,0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 15px var(--britness-primary);
+}
+.adventage::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .adventage::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 90, 0);
+  }
+  
+  .adventage::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.);
+  }
 .adventage-child img {
     width: 75px;
     height: 75px;
@@ -270,13 +296,20 @@ nav {
 .adventage-child p {
     font-size: var(--title-smaller);
 }
+.about-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+}
 .mentor-list {
     position: relative;
     padding-top: 20px;
     padding-left: 50px;
     padding-right: 50px;
-    height: 240px;
-    width: 48vw;
+    height: 250px;
+    width: 40vw;
     margin: 0 auto;
     text-align: center;
     justify-content: space-around;
@@ -324,9 +357,10 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    margin-top: -10px;
+    margin-top: -15px;
     text-align: center;
     align-items: center;
+    z-index: 999;
 }
 .mentors h3 {
     margin-top: 20px;
@@ -419,6 +453,15 @@ iframe {
     color: red; 
 }
 
+.bkg-on-menu-open {
+    top: 0;
+    position: sticky;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 997;
+}
+
 @media (max-width:1024px) {
     :root {
         --main-title: 36px;
@@ -457,10 +500,10 @@ iframe {
     .nav-options {
         position: absolute;
         right: 0px;
-        height: 86vh;
+        height: 100vh;
         background-color: var(--primary-color);
         width: 100%;
-        top: 20vh;
+        top: 15vw;
         flex-direction: column;
         align-items: center;
         transform: translateX(-100%);
@@ -534,18 +577,17 @@ iframe {
     .course-row-part {
         padding-right: 15px;
     }
-}
-
-@media (max-width:700px) {
     .nav-options {
-        top: 16vh;
+        top: 15vw;
     }
 }
 
 @media (max-width:600px) {
-    
     .header-nav {
         background: var(--primary-color);
+    }
+    .nav-options {
+        top: 15vw;
     }
     .img-logo {
         width: 50px;
@@ -587,6 +629,9 @@ iframe {
     .mentor-slider {
         flex-direction: column;
     }
+    .nav-options {
+        top: 15vw;
+    }
 }
 
 @media (max-width: 425px) {
@@ -614,7 +659,19 @@ iframe {
     .mentor-list {
         width: 50%;
     }
-    
+    .nav-options {
+        top: 20vw;
+    }
+}
+@media (max-width:375px) {
+    .nav-options {
+        top: 22vw;
+    }
+}
+@media (max-width:320px) {
+    .nav-options {
+        top: 25vw;
+    }
 }
 
 .nav-is-pressed-bkg {

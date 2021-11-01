@@ -4,10 +4,13 @@ const slide =() => {
     const nav = document.querySelector('.nav-options');
     const navBar = document.querySelector('.right-content');
     const links = document.querySelectorAll('.nav-options li');
+    const menuBkg = document.getElementById("menu-bkg");
 
     ham.addEventListener('click', () => {
         nav.classList.toggle('nav-is-pressed');
-        
+        menuBkg.classList.toggle('bkg-on-menu-open');
+
+    
         links.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = ``;
@@ -69,4 +72,7 @@ var repeater = () => {
     }, 3000);
 }
 repeater();
+
+
+
 
